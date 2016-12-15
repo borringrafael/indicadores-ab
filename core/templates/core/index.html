@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Indicadores de Saúde{% endblock %}
+
+{% block body %}
+    <div class="row text-center">
+        <h1>Secretaria Municipal de Saúde de Cristinápolis</h1><br>
+        <h3>Indicadores de Saúde</h3><br>
+    </div>
+    <div class="row text-center">
+        <p>
+          <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'core.metas' %}'">Metas Sispacto</button>
+        </p>
+    </div>
+{% endblock %}

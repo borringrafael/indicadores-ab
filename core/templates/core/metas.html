@@ -1,0 +1,227 @@
+{% extends 'core/base.html' %}
+{% load staticfiles %}
+
+{% block title %}Metas Sispacto{% endblock %}
+
+{% block style %}
+{{ block.super }}
+	<link href="{% static 'core/css/metas.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+	<div class="row">
+	        <table class="table table-striped">
+	            <thead>
+	                <tr>
+	                    <th colspan="4"><span class="pull-left">Metas Sispacto - Cristinápolis-SE</span><span class="pull-right">{% now "d/m/Y H:i:s" %}</span></th>
+	                </tr>
+	                <tr>
+	                    <th colspan="4">SIA: {{ compsiafirst }}-{{ compsiaend }}</th>
+	                </tr>
+	                <tr>
+	                    <th colspan="4">SIH: {{ compsihfirst }}-{{ compsihend }}</th>
+	                </tr>
+	                <tr>
+	                    <th colspan="4">SIM: {{ compsimfirst }}-{{ compsimend }}</th>
+	                </tr>
+	                <tr>
+	                    <th colspan="4">Sinasc: {{ compsinascfirst }}-{{ compsinascend }}</th>
+	                </tr>
+	                <tr>
+	                    <th colspan="4">Sisprenatal: {{ compsisprenatalfirst }}-{{ compsisprenatalend }}</th>
+	                </tr>
+	                <tr>
+	                    <th colspan="4">População 2012: {{ populacao2012 }}</th>
+	                </tr>
+	                <tr>
+	                    <th colspan="4">População 2015: {{ populacao2015 }}</th>
+	                </tr>
+	                <tr>
+	                    <th colspan="4"></th>
+	                </tr>
+	                <tr>
+	                    <th style="width: 5%">Indicador</th>
+	                    <th style="width: 75%">Nome</th>
+	                    <th style="width: 10%">Meta</th>
+	                    <th style="width: 10%">Resultado</th>
+	                </tr>
+	            </thead>
+	            <tbody>
+	                <tr>
+	                    <td>01</td>
+	                    <td>Cobertura de acompanhamento das condicionalidades de Saúde do Programa Bolsa Família</td>
+	                    <td>83</td>
+	                    <td>{{ ri1|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>02</td>
+	                    <td>Proporção de exodontia em relação aos procedimentos</td>
+	                    <td>-</td>
+	                    <td>{{ ri2|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>03</td>
+	                    <td>Proporção de acesso hospitalar dos óbitos por acidente</td>
+	                    <td>-</td>
+	                    <td>{{ ri3|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>04</td>
+	                    <td>Proporção de óbitos nas internações por infarto agudo do miocárdio (IAM)</td>
+	                    <td>-</td>
+	                    <td>{{ ri4|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>05</td>
+	                    <td>Razão de exames citopatológicos do colo do útero em mulheres de 25 a 64 anos e a população da mesma faixa etária</td>
+	                    <td>0,51</td>
+	                    <td>{{ ri5|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>06</td>
+	                    <td>Razão de exames de mamografia de rastreamento realizados em mulheres de 50 a 69 anos e população da mesma faixa etária</td>
+	                    <td>0,23</td>
+	                    <td>{{ ri6|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>07</td>
+	                    <td>Proporção de parto normal no SUS e na Saúde Suplementar</td>
+	                    <td>65</td>
+	                    <td>{{ ri7|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>08</td>
+	                    <td>Cobertura de Centros de Atenção Psicossocial – Caps</td>
+	                    <td>2,85</td>
+	                    <td>{{ ri8|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>09</td>
+	                    <td>Taxa de mortalidade infantil</td>
+	                    <td>2</td>
+	                    <td>{{ ri9|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>10</td>
+	                    <td>Proporção de óbitos maternos investigados</td>
+	                    <td>100</td>
+	                    <td>{{ ri10|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>11</td>
+	                    <td>Proporção de óbitos de mulheres em idade fértil (MIF) investigados</td>
+	                    <td>95</td>
+	                    <td>{{ ri11|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>12</td>
+	                    <td>Número de casos novos de sífilis congênita em menores de 1 ano de idade</td>
+	                    <td>3</td>
+	                    <td>{{ ri12|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>13</td>
+	                    <td>Taxa de mortalidade prematura (de 30 a 69 anos) pelo conjunto das quatro principais doenças crônicas não transmissíveis (DCNT)</td>
+	                    <td>15</td>
+	                    <td>{{ ri13|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>14</td>
+	                    <td>Proporção de vacinas do Calendário Básico de Vacinação da Criança com coberturas vacinais alcançadas</td>
+	                    <td>75</td>
+	                    <td>{{ ri14|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>15</td>
+	                    <td>Proporção de cura de casos novos de tuberculose pulmonar bacilífera</td>
+	                    <td>100</td>
+	                    <td>{{ ri15|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>16</td>
+	                    <td>Proporção de exame anti-HIV realizados entre os casos novos de tuberculose</td>
+	                    <td>100</td>
+	                    <td>{{ ri16|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>17</td>
+	                    <td>Proporção de registro de óbitos com causa básica definida</td>
+	                    <td>95</td>
+	                    <td>{{ ri17|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>18</td>
+	                    <td>Proporção de municípios com casos de doenças ou agravos relacionados ao trabalho notificados</td>
+	                    <td>3</td>
+	                    <td>{{ ri18|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>19</td>
+	                    <td>Número de casos novos de aids em menores de 5 anos</td>
+	                    <td>0</td>
+	                    <td>{{ ri19|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>20</td>
+	                    <td>Proporção de cura dos casos novos de hanseníase diagnosticados nos anos das coortes</td>
+	                    <td>90</td>
+	                    <td>{{ ri20|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>21</td>
+	                    <td>Proporção de contatos de casos novos de hanseníase examinados</td>
+	                    <td>95</td>
+	                    <td>{{ ri21|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>22</td>
+	                    <td>Incidência Parasitária Anual (IPA) de malária</td>
+	                    <td>-</td>
+	                    <td>{{ ri22|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>23</td>
+	                    <td>Número absoluto de óbitos por dengue</td>
+	                    <td>0</td>
+	                    <td>{{ ri23|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>24</td>
+	                    <td>Proporção de imóveis visitados em, pelo menos, quatro ciclos de visitas domiciliares para controle da dengue</td>
+	                    <td>35512</td>
+	                    <td>{{ ri24|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>25</td>
+	                    <td>Proporção de análises realizadas em amostras de água para consumo humano quanto aos parâmetros coliformes totais, cloro residual livre e turbidez</td>
+	                    <td>10</td>
+	                    <td>{{ ri25|floatformat:-2 }}</td>
+	                </tr>
+	                 <tr>
+	                    <td>26</td>
+	                    <td>Percentual de municípios que realizam no mínimo seis grupos de ações de Vigilância Sanitária, consideradas necessárias a todos os municípios</td>
+	                    <td>100</td>
+	                    <td>{{ ri26|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>27</td>
+	                    <td>Proporção de ações de educação permanente implementadas e/ou realizadas</td>
+	                    <td>-</td>
+	                    <td>{{ ri27|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>28</td>
+	                    <td>Proporção de plano de saúde enviado ao conselho de Saúde</td>
+	                    <td>1</td>
+	                    <td>{{ ri28|floatformat:-2 }}</td>
+	                </tr>
+	                <tr>
+	                    <td>29</td>
+	                    <td>Proporção de entes com pelo menos uma alimentação por ano no Banco de Preço em Saúde</td>
+	                    <td>-</td>
+	                    <td>{{ ri29|floatformat:-2 }}</td>
+	                </tr>
+	            </tbody>
+	        </table>
+	    </div>
+{% endblock %}
